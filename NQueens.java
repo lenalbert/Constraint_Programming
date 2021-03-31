@@ -24,8 +24,6 @@ public class NQueens {
                     if (p.get(i+j) == p.get(i)+j){
                         continue outerloop;
                     }
-                }
-                for (int j=1; j<p.size()-i; j++){
                     if (p.get(i+j) == p.get(i)-j){
                         continue outerloop;
                     }
