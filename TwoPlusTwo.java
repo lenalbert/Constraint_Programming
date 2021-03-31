@@ -1,16 +1,14 @@
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.HashSet;
 import java.util.*;
 
-public class Addition {
+public class TwoPlusTwo {
 
     public static void main(String[] args) {
         Comb c = new Comb(6, 10);
 
         outerloop:
-        for (List<Integer> p: comb) {
+        for (List<Integer> p: c) {
             Set<Integer> set = new HashSet<>();
             for (int i=0; i<p.size(); i++){
                 if (!set.add(p.get(i))){

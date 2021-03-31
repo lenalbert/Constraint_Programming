@@ -6,17 +6,17 @@ public class NQueensConstraint
         showNQueenSolution(8);
 	}
 
-    public static boolean solveNQueens(boolean[][] board, int column){
-        if(column >= board.length){
+    public static boolean solveNQueens(boolean[][] board, int row){
+        if(row >= board.length){
             return true;
         }
         for (int i=0; i<board.length; i++){
-            if(isValid(board, i, column)){
-                board[i][column]=true;
-                if(solveNQueens(board, column+1)){
+            if(isValid(board, row, i)){
+                board[row][i]=true;
+                if(solveNQueens(board, row+1)){
                     return true;
                 }
-                board[i][column]=false;
+                board[row][i]=false;
             }
         }
         return false;
@@ -24,16 +24,19 @@ public class NQueensConstraint
 
 
     public static boolean isValid(boolean[][] board, int row, int column){
-        for(int i=0; i<column; i++){
-            if(board[row][i]){
+        // meme colonne
+        for(int i=0; i<row; i++){
+            if(board[i][column]){
                 return false;
             }
         }
+        // diagonal haut gauche
         for(int i=row, j=column; i>=0 && j>=0; i--, j--){
             if(board[i][j]){
                 return false;
             }
         }
+        // diagonal haut droite
         for(int i=row, j=column; i>=0 && j>=board.length; i--, j++){
             if(board[i][j]){
                 return false;

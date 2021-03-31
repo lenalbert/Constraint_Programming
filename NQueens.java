@@ -69,6 +69,7 @@ public class NQueens {
 
     public static void showNQueenSolution(int n){
         boolean[][] board = new boolean[n][n];
+        // TODO USE Comb(n, n) => find a candidate solution and test it
         Comb comb = new Comb(n, 2);
         if(solveNQueens(board, comb, 0) == false){
             System.out.println("No solution found");
