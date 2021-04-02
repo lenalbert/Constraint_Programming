@@ -21,6 +21,8 @@ public class NQueensChoco {
         }
 
         Solver solver = model.getSolver();
+        
+        // TODO while loop to find all solutions
         System.out.println(solver.findSolution());
     
     }
