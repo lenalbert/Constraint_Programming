@@ -28,8 +28,9 @@ public class CumulativeChoco {
         model.cumulative(tasks, heights, limit).post();
 
         Solver solver = model.getSolver();
-        System.out.println(solver.findAllSolutions());
-
+        for(var s:solver.findAllSolutions()){
+            System.out.println(s);
+        }
     }
     
 }

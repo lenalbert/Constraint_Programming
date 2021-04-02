@@ -27,8 +27,10 @@ public class TwoPlusTwoChoco {
         };
 
         model.scalar(vars, coeffs, "=", 0).post();
+        
         Solver solver = model.getSolver();
-        // one solution
-        System.out.println(solver.findAllSolutions());
+        for(var s:solver.findAllSolutions()){
+            System.out.println(s);
+        }
     }
 }
