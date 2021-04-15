@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MagicSquare",
+            "request": "launch",
+            "mainClass": "MagicSquare",
+            "projectName": "Constraint_Programming_862c3ff2"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
