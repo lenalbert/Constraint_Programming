@@ -1,22 +1,16 @@
 import java.util.List;
-import java.util.HashSet;
-import java.util.*;
 
 public class NQueens {
 
     public static void main(String[] args) {
 
-        int n=4;
+        long start = System.currentTimeMillis();
+        int n=15;
         Perm perm = new Perm(n);
 
         outerloop:
         for (List<Integer> p: perm) {
-            Set<Integer> set = new HashSet<>();
-            for (int i=0; i<p.size(); i++){
-                if (!set.add(p.get(i))){
-                    continue outerloop;
-                }
-            }
+            
             for (int i=0; i<p.size(); i++){
                 for (int j=1; j<p.size()-i; j++){
                     if (p.get(i+j) == p.get(i)+j){
@@ -28,7 +22,9 @@ public class NQueens {
                 }
             }
             System.out.println(p);
-        } 
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
     }
 
 

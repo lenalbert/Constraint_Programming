@@ -8,15 +8,15 @@ public class CumulativeChoco {
 
     public static void main(String[] args) {
 
+        long start = System.currentTimeMillis();
         Model model = new Model("Example");
-
         Task[] tasks = new Task[4];
         int d = 1;
         for (int i = 0; i < 4; i++) {
-            IntVar start = model.intVar("S"+i, 1, 9);
+            IntVar st = model.intVar("S"+i, 1, 9);
             IntVar duration = model.intVar("D"+i, d++);
             IntVar end = model.intVar("E"+i, 1, 8);
-            tasks[i] = new Task(start, duration, end);
+            tasks[i] = new Task(st, duration, end);
         }
         IntVar[] heights = new IntVar[4];
         int[] val = new int[]{1, 2, 5, 7};
@@ -31,6 +31,9 @@ public class CumulativeChoco {
         for(var s:solver.findAllSolutions()){
             System.out.println(s);
         }
+        long end = System.currentTimeMillis();
+        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
     }
+    
     
 }

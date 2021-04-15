@@ -6,7 +6,9 @@ public class Decomposition {
 
     public static void main(String[] args) {
 
+        long start = System.currentTimeMillis();
         int n = 4;
+
         Comb comb = new Comb(n, n+1);
         Set<String> set = new HashSet<>();
 
@@ -26,5 +28,7 @@ public class Decomposition {
             set.add(str);
         }
         System.out.println(set);
+        long end = System.currentTimeMillis();
+        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
     }
 }

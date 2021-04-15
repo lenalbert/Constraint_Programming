@@ -9,10 +9,10 @@ public class DecompositionChoco {
 
     public static void main(String[] args) {
 
+        long start = System.currentTimeMillis();
         int n = 5;
 
         Model model = new Model("Decomposition");
-
         IntVar[] variables = model.intVarArray("V", n, 0, n);
         model.sum(variables, "=", n).post();
         model.regular(variables, new FiniteAutomaton("[1-9]+0*")).post();
@@ -21,8 +21,8 @@ public class DecompositionChoco {
         for(var s:solver.findAllSolutions()){
             System.out.println(s);
         }
-
-    
+        long end = System.currentTimeMillis();
+        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
     }
     
 }

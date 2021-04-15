@@ -3,7 +3,10 @@ import java.util.Arrays;
 public class NQueensConstraint
 {
 	public static void main(String[] args) {
+        long start = System.currentTimeMillis();
         showNQueenSolution(8);
+        long end = System.currentTimeMillis();
+        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
 	}
 
     public static boolean solveNQueens(boolean[][] board, int row){

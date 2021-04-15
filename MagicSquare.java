@@ -4,9 +4,9 @@ public class MagicSquare {
 
     public static void main(String[] args) {
 
+        long start = System.currentTimeMillis();
         int n=3;
         int sum = (n*(n*n+1))/2;
-
         Perm perm = new Perm(n*n, 1);
 
         outerloop:
@@ -63,6 +63,9 @@ public class MagicSquare {
             }
             System.out.println(p);
         }
+
+        long end = System.currentTimeMillis();
+        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
 
     }
     

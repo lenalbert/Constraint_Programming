@@ -7,7 +7,8 @@ public class NQueensChoco {
 
     public static void main(String[] args) {
 
-        int n=4;
+        long start = System.currentTimeMillis();
+        int n=15;
 
         Model model = new Model("NQueens");
         IntVar[] V = model.intVarArray("V", n, 1, n);
@@ -24,6 +25,9 @@ public class NQueensChoco {
         for(var s:solver.findAllSolutions()){
             System.out.println(s);
         }
+
+        long end = System.currentTimeMillis();
+        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
     
     }
 }

@@ -7,13 +7,12 @@ public class MagicSquareChoco {
 
     public static void main(String[] args) {
         
+        long start = System.currentTimeMillis();
         int n=3;
         int sum = (n*(n*n+1))/2;
 
         Model model = new Model("MagicSquare");
-
         IntVar[][] vMat = model.intVarMatrix("V", n, n, 1, n*n);
-
         IntVar[] vAll = new IntVar[n*n];
         IntVar[] vDiag1 = new IntVar[n];
         IntVar[] vDiag2 = new IntVar[n];
@@ -46,6 +45,8 @@ public class MagicSquareChoco {
             System.out.println(s);
         }
     
+        long end = System.currentTimeMillis();
+        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
     }
     
 }
