@@ -11,7 +11,12 @@ public class NQueens {
 
         outerloop:
         for (List<Integer> p: perm) {
-            
+            Set<Integer> set = new HashSet<>();
+            for (int i=0; i<p.size(); i++){
+                if (!set.add(p.get(i))){
+                    continue outerloop;
+                }
+            }
             for (int i=0; i<p.size(); i++){
                 for (int j=1; j<p.size()-i; j++){
                     if (p.get(i+j) == p.get(i)+j){

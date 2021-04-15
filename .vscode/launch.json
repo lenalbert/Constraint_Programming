@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Decomposition",
+            "request": "launch",
+            "mainClass": "Decomposition",
+            "projectName": "Constraint_Programming_862c3ff2"
+        },
+        {
+            "type": "java",
             "name": "Launch MagicSquare",
             "request": "launch",
             "mainClass": "MagicSquare",
