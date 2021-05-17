@@ -46,7 +46,7 @@ public class MagicSquareChoco {
         }
     
         long end = System.currentTimeMillis();
-        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
+        System.out.println("Magic Square w/ choco takes " + (end - start) + "ms");
     }
     
 }

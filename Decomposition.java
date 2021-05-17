@@ -29,6 +29,6 @@ public class Decomposition {
         }
         System.out.println(set);
         long end = System.currentTimeMillis();
-        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
+        System.out.println("Decomposition takes " + (end - start) + "ms");
     }
 }

@@ -27,7 +27,7 @@ public class NQueensChoco {
         }
 
         long end = System.currentTimeMillis();
-        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
+        System.out.println("NQueens w/ choco takes " + (end - start) + "ms");
     
     }
 }

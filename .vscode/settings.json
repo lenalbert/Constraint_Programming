@@ -2,5 +2,8 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "c:\\Users\\lenal\\Documents\\M2\\DEC2 - Constraint Programming\\choco-parsers-4.10.6-jar-with-dependencies.jar"
+    ],
+    "java.project.sourcePaths": [
+        ""
     ]
 }

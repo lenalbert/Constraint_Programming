@@ -6,7 +6,7 @@ public class NQueensConstraint
         long start = System.currentTimeMillis();
         showNQueenSolution(8);
         long end = System.currentTimeMillis();
-        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
+        System.out.println("NQueens w/ recursive function takes " + (end - start) + "ms");
 	}
 
     public static boolean solveNQueens(boolean[][] board, int row){

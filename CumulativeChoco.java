@@ -32,7 +32,7 @@ public class CumulativeChoco {
             System.out.println(s);
         }
         long end = System.currentTimeMillis();
-        System.out.println("Counting to 10000000 takes " + (end - start) + "ms");
+        System.out.println("Cumulative w/ choco takes " + (end - start) + "ms");
     }
     
     
